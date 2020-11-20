@@ -1,11 +1,18 @@
 package com.main;
 
-import Animal.Tiger;
+import Printer.Printer;
+import Printer.ColorPrinter;
+import Printer.BlackAndWhitePrinter;
 
 public class Main {
     public static void main(String[] args) {
-        //9. Inheritance
-        Tiger tiger = new Tiger(3, 43.2, true, true);
-        tiger.meowing();
+        //10. Polymorphism
+        Printer printer = new Printer();
+        ColorPrinter colorPrinter = new ColorPrinter();
+        BlackAndWhitePrinter blackAndWhitePrinter = new BlackAndWhitePrinter();
+
+        printer.printing();
+        colorPrinter.printing("red");
+        blackAndWhitePrinter.printing();
     }
 }
